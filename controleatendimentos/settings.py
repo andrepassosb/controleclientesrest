@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-zq_!53%69$*rd4aryk8u7*n9=7wx6d0ds88r+7k^x&4$%t))^=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['127.0.0.1','.localhost','[::1]','.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1','.localhost','[::1]','.vercel.app','.now.sh']
 
 
 # Application definition
@@ -144,3 +144,6 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 #Com fina das contas free e problemas no githubactions foidesabilitado temporariamente
 #django_on_heroku.settings(locals())
+
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
